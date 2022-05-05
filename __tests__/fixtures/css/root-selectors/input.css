@@ -1,0 +1,8 @@
+html {
+	color: red;
+}
+
+/* @specificity */
+html, :root, :host {
+	color: rebeccapurple;
+}

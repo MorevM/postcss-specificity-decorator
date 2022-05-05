@@ -1,0 +1,7 @@
+:not(#\9) .foo {
+	background: rebeccapurple;
+}
+
+.bar {
+	color: red;
+}

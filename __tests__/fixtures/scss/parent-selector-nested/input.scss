@@ -1,0 +1,15 @@
+.block {
+	$b: &;
+
+	div { /* @specificity */
+		color: red;
+	}
+
+	&__foo { /* @specificity */
+		color: blue;
+
+		#{$b}--disabled & { /* @specificity */
+			color: red;
+		}
+	}
+}

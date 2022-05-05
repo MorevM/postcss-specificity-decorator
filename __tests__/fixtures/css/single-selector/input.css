@@ -1,0 +1,9 @@
+/* @specificity */
+.class {
+	background: rebeccapurple;
+}
+
+/* @specificity */
+#id {
+	background: red;
+}

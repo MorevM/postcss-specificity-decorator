@@ -1,0 +1,19 @@
+:not(#\9) .block__foo {
+	color: blue;
+}
+
+@media (max-width: 768px) {
+	:not(#\9) .block__foo {
+		color: rebeccapurple;
+	}
+}
+
+:not(#\9) .block--disabled .block__foo {
+	color: red;
+}
+
+@media (max-width: 768px) {
+	:not(#\9) .block--disabled .block__foo {
+		color: rebeccapurple;
+	}
+}

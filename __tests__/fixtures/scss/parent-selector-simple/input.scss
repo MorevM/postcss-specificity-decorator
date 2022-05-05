@@ -1,0 +1,14 @@
+.block {
+	&__element { /* @specificity */
+		color: red;
+	}
+
+	&__foo {
+		color: blue;
+	}
+
+	&__bar {
+		color: blue;
+		/* @specificity */
+	}
+}

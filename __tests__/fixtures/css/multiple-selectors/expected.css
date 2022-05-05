@@ -1,0 +1,7 @@
+:not(#\9) .class, :not(#\9) .class2, :not(#\9) div div[id="id"], :not(#\9) #id {
+	background: rebeccapurple;
+}
+
+:not(#\9) ::selection {
+	background-color: red;
+}

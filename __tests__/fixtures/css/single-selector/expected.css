@@ -1,0 +1,7 @@
+:not(#\9) .class {
+	background: rebeccapurple;
+}
+
+:not(#\9) #id {
+	background: red;
+}

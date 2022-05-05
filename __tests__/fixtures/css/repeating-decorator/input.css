@@ -1,0 +1,9 @@
+/* @specificity *//* @specificity */
+/* @specificity */
+.foo {
+	background: rebeccapurple;
+}
+
+.bar {
+	color: red;
+}

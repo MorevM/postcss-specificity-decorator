@@ -1,0 +1,9 @@
+/* @specificity */
+.class, .class2, div div[id="id"], #id {
+	background: rebeccapurple;
+}
+
+/* @specificity */
+::selection {
+	background-color: red;
+}

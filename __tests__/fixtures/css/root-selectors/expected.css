@@ -1,0 +1,7 @@
+html {
+	color: red;
+}
+
+html:not(#\9), :root:not(#\9), :host:not(#\9) {
+	color: rebeccapurple;
+}

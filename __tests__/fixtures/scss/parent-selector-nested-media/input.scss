@@ -1,0 +1,19 @@
+.block {
+	$b: &;
+
+	&__foo { /* @specificity */
+		color: blue;
+
+		@media (max-width: 768px) {
+			color: rebeccapurple;
+		}
+
+		#{$b}--disabled & { /* @specificity */
+			color: red;
+
+			@media (max-width: 768px) {
+				color: rebeccapurple;
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"name": "postcss-specificity-decorator",
+	"description": "PostCSS plugin to increase the specificity of selectors",
+	"type": "module",
+	"version": "0.0.0",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"author": {
+		"name": "Maxim Morev",
+		"email": "max.seainside@gmail.com"
+	},
+	"homepage": "https://github.com/MorevM/postcss-specificity-decorator#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MorevM/postcss-specificity-decorator"
+	},
+	"keywords": [
+		"postcss",
+		"css",
+		"postcss-plugin",
+		"specificity"
+	],
+	"files": [
+		"dist",
+		"types"
+	],
+	"exports": {
+		".": {
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.mjs"
+		},
+		"./7": {
+			"require": "./dist/postcss7.cjs",
+			"import": "./dist/postcss7.mjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./types/index.d.ts",
+	"scripts": {
+		"build": "unbuild",
+		"prepare": "husky install ./.husky",
+		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
+		"release": "release-it --disable-metrics",
+		"lint": "yarn lint:eslint",
+		"lint:fix": "yarn lint:eslint:fix",
+		"lint:eslint": "eslint \"**/*.{js,ts,vue,json,json5,jsonc,yml,yaml,md}\"",
+		"lint:eslint:fix": "eslint \"**/*.{js,ts,vue,json,json5,jsonc,yml,yaml,md}\" --fix",
+		"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+	},
+	"peerDependencies": {
+		"postcss": ">=7"
+	},
+	"devDependencies": {
+		"@morev/commitlint-config": "^0.1.1",
+		"@morev/eslint-config": "^11.3.0",
+		"@release-it/conventional-changelog": "^5.0.0",
+		"@types/jest": "^27.5.0",
+		"clean-css": "^5.3.0",
+		"commonjs-variables-for-esmodules": "^1.1.0",
+		"eslint": "^8.14.0",
+		"husky": "^7.0.4",
+		"jest": "^28.0.3",
+		"lint-staged": "^12.4.1",
+		"postcss": "^8.4.13",
+		"release-it": "^15.0.0",
+		"sass": "^1.51.0",
+		"unbuild": "^0.7.4"
+	}
+}

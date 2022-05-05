@@ -1,0 +1,11 @@
+:not(#\9) .block__element {
+	color: red;
+}
+
+.block__foo {
+	color: blue;
+}
+
+:not(#\9) .block__bar {
+	color: blue;
+}

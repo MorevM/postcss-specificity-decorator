@@ -1,0 +1,13 @@
+html { /* @specificity */
+	color: rebeccapurple;
+	background: white;
+}
+
+.block {
+	padding: /* @specificity */ 0;
+	/* @specificity */
+}
+
+@media (max-width: 768px) {
+	/* @specificity */
+}

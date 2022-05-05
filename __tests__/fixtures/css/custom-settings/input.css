@@ -1,0 +1,9 @@
+/*! +spec */
+html[data-whatintent=keyboard] .button:focus {
+	background: rebeccapurple;
+}
+
+/*! @specificity */
+.bar {
+	color: red;
+}

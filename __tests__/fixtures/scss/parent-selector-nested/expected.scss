@@ -1,0 +1,11 @@
+:not(#\9) .block div {
+	color: red;
+}
+
+:not(#\9) .block__foo {
+	color: blue;
+}
+
+:not(#\9) .block--disabled .block__foo {
+	color: red;
+}
