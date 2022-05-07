@@ -769,18 +769,18 @@
     conventional-changelog-conventionalcommits "^4.6.3"
     lodash.clonedeep "^4.5.0"
 
-"@morev/eslint-config@^11.3.0":
-  version "11.3.0"
-  resolved "https://registry.yarnpkg.com/@morev/eslint-config/-/eslint-config-11.3.0.tgz#9c296e8423a822e4635c73429ef9d26816c12341"
-  integrity sha512-J7gRoUJ5POaFmbcrGSxrf0hxKTByuULzxyr+eU+cIw5UQ9p9yfQeRfX218XKOhhIVbuw/TcgyPwInUZICEQXOA==
+"@morev/eslint-config@^11.4.0":
+  version "11.4.0"
+  resolved "https://registry.yarnpkg.com/@morev/eslint-config/-/eslint-config-11.4.0.tgz#b367476c997edaeca3e9dc703e546b0a04f50c00"
+  integrity sha512-o+M5q9+WHM1OUZbun2PoVcy1qyCnBs15LmMEP3dWwHmFe1xmwrHzt1DxE+AzgK641Du/PmT4u0yGuIC4pbAClA==
   dependencies:
     "@babel/core" "^7.17.10"
     "@babel/eslint-parser" "^7.16.5"
     "@babel/plugin-syntax-jsx" "^7.16.7"
     "@html-eslint/eslint-plugin" "^0.13.1"
     "@html-eslint/parser" "^0.13.1"
-    "@typescript-eslint/eslint-plugin" "^5.21.0"
-    "@typescript-eslint/parser" "^5.21.0"
+    "@typescript-eslint/eslint-plugin" "^5.22.0"
+    "@typescript-eslint/parser" "^5.22.0"
     eslint-plugin-chai-friendly "^0.7.2"
     eslint-plugin-cypress "^2.12.1"
     eslint-plugin-eslint-comments "^3.2.0"
@@ -1236,7 +1236,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^5.21.0":
+"@typescript-eslint/eslint-plugin@^5.22.0":
   version "5.22.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.22.0.tgz#7b52a0de2e664044f28b36419210aea4ab619e2a"
   integrity sha512-YCiy5PUzpAeOPGQ7VSGDEY2NeYUV1B0swde2e0HzokRsHBYjSdF6DZ51OuRZxVPHx0032lXGLvOMls91D8FXlg==
@@ -1251,7 +1251,7 @@
     semver "^7.3.5"
     tsutils "^3.21.0"
 
-"@typescript-eslint/parser@^5.21.0":
+"@typescript-eslint/parser@^5.22.0":
   version "5.22.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.22.0.tgz#7bedf8784ef0d5d60567c5ba4ce162460e70c178"
   integrity sha512-piwC4krUpRDqPaPbFaycN70KCP87+PC5WZmrWs+DlVOxxmF+zI6b6hETv7Quy4s9wbkV16ikMeZgXsvzwI3icQ==
