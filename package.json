@@ -55,19 +55,19 @@
 		"postcss": ">=7"
 	},
 	"devDependencies": {
-		"@morev/commitlint-config": "^0.1.1",
-		"@morev/eslint-config": "^12.2.0",
-		"@release-it/conventional-changelog": "^5.0.0",
-		"@types/jest": "^28.1.1",
-		"clean-css": "^5.3.0",
+		"@morev/commitlint-config": "^0.2.2",
+		"@morev/eslint-config": "^33.0.0",
+		"@release-it/conventional-changelog": "^8.0.1",
+		"@types/jest": "^29.5.12",
+		"clean-css": "^5.3.3",
 		"commonjs-variables-for-esmodules": "^1.1.0",
-		"eslint": "^8.17.0",
-		"husky": "^8.0.1",
-		"jest": "^28.1.1",
-		"lint-staged": "^13.0.0",
-		"postcss": "^8.4.14",
-		"release-it": "^15.0.0",
-		"sass": "^1.52.3",
-		"unbuild": "^0.7.4"
+		"eslint": "8.57.0",
+		"husky": "^9.0.11",
+		"jest": "^29.7.0",
+		"lint-staged": "^15.2.5",
+		"postcss": "^8.4.38",
+		"release-it": "^17.3.0",
+		"sass": "^1.77.4",
+		"unbuild": "^2.0.0"
 	}
 }
