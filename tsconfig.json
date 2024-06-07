@@ -12,14 +12,12 @@
 		"checkJs": false,
 		"allowJs": false,
 		"skipLibCheck": true,
-		"types": ["node"]
+		"types": ["node", "vitest/globals"]
 	},
 	"ts-node": {
 		"esm": true
 	},
 	"exclude": [
-		"__tests__",
-		"build",
 		"dist"
 	]
 }

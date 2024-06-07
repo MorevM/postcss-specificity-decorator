@@ -1,18 +1,25 @@
-import fs from 'fs';
-import { join } from 'path';
+import fs from 'node:fs';
+import { join } from 'node:path';
 import commonjsVariables from 'commonjs-variables-for-esmodules';
 import postcss from 'postcss';
 import CleanCSS from 'clean-css';
 import sass from 'sass';
-import specificityDecorator from '../src/index.js';
+import specificityDecorator from '../src/index';
+import type { PluginOptions } from '../src/types';
 
 const clean = new CleanCSS({ format: 'beautify' });
 
 const { __dirname } = commonjsVariables(import.meta);
 
-const testPluginFactory = (context, scss = false) => (directory, options = {}) => {
+const testPluginFactory = (
+	context: 'scss' | 'css',
+	scss = false,
+) => (
+	directory: string,
+	options: Partial<PluginOptions> = {},
+) => {
 	const extension = scss ? '.scss' : '.css';
-	const getContents = (file) => fs.readFileSync(
+	const getContents = (file: string) => fs.readFileSync(
 		join(__dirname, 'fixtures', context, directory, `${file}${extension}`),
 		{ encoding: 'utf8' },
 	);
@@ -27,7 +34,7 @@ const testPluginFactory = (context, scss = false) => (directory, options = {}) =
 	return [input, clean.minify(getContents('expected')).styles];
 };
 
-let testPlugin = null;
+let testPlugin: ReturnType<typeof testPluginFactory>;
 
 describe('postcss-specificity-decorator', () => {
 	describe(`sourceType === 'css'`, () => {
@@ -68,7 +75,6 @@ describe('postcss-specificity-decorator', () => {
 		it(`Respects custom settings (except 'sourceType' processed in another test)`, () => {
 			const [input, expected] = testPlugin('custom-settings', {
 				keyword: '+spec',
-				repeat: 2,
 			});
 
 			expect(input).toBe(expected);

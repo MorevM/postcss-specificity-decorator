@@ -60,7 +60,8 @@
 		"lint:fix": "yarn lint:eslint:fix",
 		"lint:eslint": "eslint \"**/*.{js,ts,vue,json,json5,jsonc,yml,yaml,md}\"",
 		"lint:eslint:fix": "eslint \"**/*.{js,ts,vue,json,json5,jsonc,yml,yaml,md}\" --fix",
-		"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+		"test": "vitest",
+		"test:dev": "vitest --watch"
 	},
 	"peerDependencies": {
 		"postcss": ">=7"
@@ -69,16 +70,16 @@
 		"@morev/commitlint-config": "^0.2.2",
 		"@morev/eslint-config": "^33.0.0",
 		"@release-it/conventional-changelog": "^8.0.1",
-		"@types/jest": "^29.5.12",
+		"@types/clean-css": "^4.2.11",
 		"clean-css": "^5.3.3",
 		"commonjs-variables-for-esmodules": "^1.1.0",
 		"eslint": "8.57.0",
 		"husky": "^9.0.11",
-		"jest": "^29.7.0",
 		"lint-staged": "^15.2.5",
 		"postcss": "^8.4.38",
 		"release-it": "^17.3.0",
 		"sass": "^1.77.4",
-		"tsup": "^8.1.0"
+		"tsup": "^8.1.0",
+		"vitest": "^1.6.0"
 	}
 }
