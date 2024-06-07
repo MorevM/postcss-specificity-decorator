@@ -24,24 +24,35 @@
 		"specificity"
 	],
 	"files": [
-		"dist",
-		"types"
+		"dist"
 	],
 	"exports": {
 		".": {
-			"require": "./dist/index.cjs",
-			"import": "./dist/index.mjs"
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			},
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
 		},
 		"./7": {
-			"require": "./dist/postcss7.cjs",
-			"import": "./dist/postcss7.mjs"
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/postcss7.cjs"
+			},
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/postcss7.js"
+			}
 		}
 	},
 	"main": "./dist/index.cjs",
-	"module": "./dist/index.mjs",
-	"types": "./types/index.d.ts",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"scripts": {
-		"build": "unbuild",
+		"build": "tsup",
 		"prepare": "husky install ./.husky",
 		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
 		"release": "release-it --disable-metrics",
@@ -68,6 +79,6 @@
 		"postcss": "^8.4.38",
 		"release-it": "^17.3.0",
 		"sass": "^1.77.4",
-		"unbuild": "^2.0.0"
+		"tsup": "^8.1.0"
 	}
 }

@@ -1,10 +1,25 @@
 {
 	"compilerOptions": {
-		"target": "es2018",
-		"module": "commonjs",
-		"allowJs": true,
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
 		"strict": true,
-		"noEmit": true,
-		"esModuleInterop": true
-	}
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"forceConsistentCasingInFileNames": true,
+		"outDir": "./dist",
+		"checkJs": false,
+		"allowJs": false,
+		"skipLibCheck": true,
+		"types": ["node"]
+	},
+	"ts-node": {
+		"esm": true
+	},
+	"exclude": [
+		"__tests__",
+		"build",
+		"dist"
+	]
 }
