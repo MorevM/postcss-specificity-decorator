@@ -54,7 +54,6 @@
 	"scripts": {
 		"build": "tsup",
 		"prepare": "husky install ./.husky",
-		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
 		"release": "release-it --disable-metrics",
 		"lint": "yarn lint:eslint",
 		"lint:fix": "yarn lint:eslint:fix",
