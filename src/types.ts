@@ -3,6 +3,13 @@
  */
 export type PluginOptions = {
 	/**
+	 * The selector used to increase the specificity of the rules.
+	 *
+	 * @default ':not(#\\9)'
+	 */
+	root: string;
+
+	/**
 	 * The keyword that triggers plugin to process the rule. \
 	 * The comment SHOULD start with that keyword to run.
 	 *

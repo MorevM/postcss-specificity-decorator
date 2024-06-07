@@ -1,0 +1,14 @@
+/*! @specificity */
+#global-wrapper .bar {
+	color: red;
+}
+
+/*! @specificity */
+#global-wrapper#global-wrapper .bar {
+	color: red;
+}
+
+/*! @specificity */
+#global-wrapper.is-visible#global-wrapper .bar {
+	color: red;
+}

@@ -12,8 +12,3 @@ pre-commit:
       skip: [merge, rebase]
       run: yarn eslint {staged_files} --fix
       stage_fixed: true
-    stylelint:
-      glob: '*.{css,scss}'
-      skip: [merge, rebase]
-      run: yarn stylelint {staged_files} --fix --allow-empty-input
-      stage_fixed: true

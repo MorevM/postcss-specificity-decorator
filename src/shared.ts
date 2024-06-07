@@ -1,9 +1,8 @@
 import type { Comment, Rule } from 'postcss';
 import type { _PluginOptions, _MediaStackItem, PluginOptions } from './types';
 
-const ROOT = `:not(#\\9)`;
-
 export const DEFAULTS: PluginOptions = {
+	root: ':not(#\\9)',
 	keyword: '@specificity',
 	sourceType: 'css',
 };
@@ -12,14 +11,16 @@ export const increaseSpecificityOfRule = (rule: Rule, settings: _PluginOptions) 
 	rule.selectors = rule.selectors.map(selector => {
 		// Apply to the root if the selector is a `root` level component or includes it
 		// Example: `html:not(#\\9)`
-		if (['html', ':root', ':host'].some(s => selector.startsWith(s))) {
+		if (
+			(['html', ':root', ':host', settings.root].some(s => selector.startsWith(s)))
+		) {
 			const [root, ...rest] = selector.split(' ');
-			return [root + ROOT.repeat(settings.repeat), ...rest].join(' ');
+			return [root + settings.root.repeat(settings.repeat), ...rest].join(' ');
 		}
 
 		// Otherwise make it a descendant (this is what will happen most of the time)
 		// Example: `:not(#\9) .foo`
-		return [ROOT.repeat(settings.repeat), selector].join(' ');
+		return [settings.root.repeat(settings.repeat), selector].join(' ');
 	});
 };
 

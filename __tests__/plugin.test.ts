@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import commonjsVariables from 'commonjs-variables-for-esmodules';
 import postcss from 'postcss';
 import CleanCSS from 'clean-css';
-import sass from 'sass';
+import * as sass from 'sass';
 import specificityDecorator from '../src/index';
 import type { PluginOptions } from '../src/types';
 
@@ -72,9 +72,17 @@ describe('postcss-specificity-decorator', () => {
 			expect(input).toBe(expected);
 		});
 
-		it(`Respects custom settings (except 'sourceType' processed in another test)`, () => {
-			const [input, expected] = testPlugin('custom-settings', {
+		it(`Respects custom 'keyword' setting`, () => {
+			const [input, expected] = testPlugin('custom-keyword', {
 				keyword: '+spec',
+			});
+
+			expect(input).toBe(expected);
+		});
+
+		it(`Respects custom 'root' setting`, () => {
+			const [input, expected] = testPlugin('custom-root', {
+				root: '#global-wrapper',
 			});
 
 			expect(input).toBe(expected);
